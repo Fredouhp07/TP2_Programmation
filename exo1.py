@@ -10,7 +10,7 @@ with open('data.json', 'r') as fichier_json:
     data = json.load(fichier_json)
 
 # Conversion nombres complexes en csv
-data_csv = complexe_en_csv(complex(nombre_complexe[0], nombre_complexe[1])) for nombre_complexe in data]
+data_csv = [complexe_en_csv(complex(nombre_complexe[0], nombre_complexe[1])) for nombre_complexe in data]
 
 # Écriture des données
 with open('output.csv', 'w', newline='') as fichier_csv:
